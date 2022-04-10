@@ -6,6 +6,6 @@ class Ballantine < Formula
   license "MIT"
 
   def install
-    bin.install "ballantine.sh"
+    bin.install "ballantine.sh" => "ballantine"
   end
 end

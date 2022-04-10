@@ -7,5 +7,6 @@ class Ballantine < Formula
 
   def install
     bin.install "ballantine.sh" => "ballantine"
+    bin.install Dir["src/*.sh"]
   end
 end

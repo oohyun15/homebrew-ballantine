@@ -1,12 +1,11 @@
 class Ballantine < Formula
   desc "Describe your commits"
   homepage "https://github.com/oohyun15/ballantine"
-  url "https://github.com/oohyun15/ballantine/archive/refs/tags/v0.0.3.tar.gz"
-  sha256 "facc5b40590d40399bb9112c7dab09f854b9bc3a4fcc147c1615fc8514c630b5"
+  url "https://github.com/oohyun15/ballantine/archive/refs/tags/v0.0.4.tar.gz"
+  sha256 "9ecc249ab6ae5aefde291b4424cfdca4c090da512b2c27518c9ab523db69c0d6"
   license "MIT"
 
   def install
     bin.install "ballantine.sh" => "ballantine"
-    bin.install Dir["src/*.sh"]
   end
 end

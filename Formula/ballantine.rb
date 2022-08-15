@@ -1,11 +1,18 @@
 class Ballantine < Formula
   desc "Describe your commits"
   homepage "https://github.com/oohyun15/ballantine"
-  url "https://github.com/oohyun15/ballantine/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "e6f5835480415647ec14bd9ec7a2e0322f47800cb274dbc66c7aeb39872e552c"
+  url "https://github.com/oohyun15/ballantine/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "37379de44a92dc20ebc4523ced14bfaa1c1a872afefe1491feb2e7396b8fa0f3"
   license "MIT"
 
+  depends_on "git"
+  depends_on "ruby"
+
   def install
-    bin.install "ruby/ballantine" => "ballantine"
+    ENV["GEM_HOME"] = libexec
+    system "gem", "build", "ruby/#{name}.gemspec"
+    system "gem", "install", "ruby/#{name}-#{version}.gem"
+    bin.install libexec/"bin/#{name}"
+    bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
   end
 end

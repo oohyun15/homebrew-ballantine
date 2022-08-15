@@ -5,8 +5,8 @@ class Ballantine < Formula
   sha256 "6b39608fc4a665087c8d1eda69f87678ad8bce38ad8e0cdbe5aeff7f24156002"
   license "MIT"
 
+  uses_from_macos "ruby", since: :catalina
   depends_on "git"
-  depends_on "ruby"
 
   def install
     ENV["GEM_HOME"] = libexec

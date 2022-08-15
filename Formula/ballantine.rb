@@ -6,7 +6,7 @@ class Ballantine < Formula
   license "MIT"
 
   depends_on "git"
-  depends_on "ruby"
+  depends_on "ruby@3.1"
 
   def install
     ENV["GEM_HOME"] = libexec

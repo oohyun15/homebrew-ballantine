@@ -10,7 +10,6 @@ class Ballantine < Formula
 
   def install
     ENV["GEM_HOME"] = libexec
-    Dir.chdir "ruby"
     system "gem", "build", "#{name}.gemspec"
     system "gem", "install", "ballantine*.gem"
     bin.install libexec/"bin/#{name}"

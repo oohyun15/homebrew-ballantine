@@ -1,8 +1,8 @@
 class Ballantine < Formula
   desc "Describe your commits"
   homepage "https://github.com/oohyun15/ballantine"
-  url "https://github.com/oohyun15/ballantine/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "30077bd05c334f4ffbe4341d393d2316fb64f2d4c96f1f0971149c7f9108b0e6"
+  url "https://github.com/oohyun15/ballantine/archive/refs/tags/v0.1.5-rc2.tar.gz"
+  sha256 "a5055751c4ce8ab03efb0ca5d11501b33a544e68c241007f97f9a79590a32c88"
   license "MIT"
 
   depends_on "git"
